@@ -563,7 +563,7 @@
       <details><summary>Can I become a client?</summary><p>MoCo is fully booked. We have one client and we are keeping it that way. (If you are curious how it works, ask Kevin. He will talk about it for a long time.)</p></details>
       <details><summary>Is this financial advice?</summary><p>No. MoCo is not a bank, a brokerage, an accounting firm or a licensed advisor. It is a friend with very good spreadsheets. The client's real accountant still does the real accounting.</p></details>
       <details><summary>Why does everyone have an emoji?</summary><p>Company policy. Also it makes the org chart easier to read. 🗺️</p></details>
-      <details><summary>Who named everyone?</summary><p>Kevin and Mo picked starter names. Our client gets final say and can rename anyone at any time. Irwin has asked to keep his. He argues it is half IRS and half win.</p></details>
+      <details><summary>Who named everyone?</summary><p>Kevin and Mo picked starter names. Our client has the final say, and has already used it: Otto is her pick. Irwin has asked to keep his. He argues it is half IRS and half win.</p></details>
     </div>
   </div>
 </section>
@@ -598,7 +598,7 @@
       bio: "Looks months ahead, so big decisions arrive early and easy.",
       fact: "Owns one umbrella and has never needed it, because it is always packed in advance." },
     { e: "🐢", name: "Shelly", watch: "Every policy, and when each one renews.", title: "Insurance Navigator", bg: "var(--sage)",
-      bio: "Finds coverage that actually fits.",
+      bio: "Finds coverage that fits.",
       fact: "A good turtle knows a sturdy shell matters. Slow and steady, fully covered." },
     { e: "🌸", name: "Bloom", watch: "How people find the business, in totals (never names).", title: "Growth & Revenue Lead", bg: "var(--rose)",
       bio: "Helps the right people find the business.",
@@ -610,7 +610,7 @@
       bio: "Stops money slipping away, and finds cheaper ways to buy the same things.",
       fact: "Nick as in nickel, and as in the nick of time. Your favorite things stay off his list, always." },
     { e: "🎩", name: "Hattie", watch: "The team itself: who MoCo needs next, and that everyone works the MoCo way.", title: "People & Culture", bg: "var(--peach)",
-      bio: "I welcome every new teammate and make sure each one knows the MoCo way: her words and her goals come first.",
+      bio: "Welcomes every new teammate and makes sure each one knows the MoCo way: her words and her goals come first.",
       fact: "Keeps a closet with a hat for every job MoCo might ever need. Tries them all on, just to check." },
     { e: "🕵️", name: "Otto", watch: "The team's work, checked against the original statements.", title: "Internal Auditor", bg: "var(--lilac)",
       bio: "Double-checks everyone's work and reports straight to Kevin.",
@@ -699,7 +699,12 @@
     "Ello MoCo! 🕵️ Otto double-checked that greeting.",
     "Ello! 🌸 Bloom says people are finding you.",
     "Ello! 🔍 Nick found a cheaper way to say hello.",
-    "Ello! 🧾 Irwin would like to talk about taxes. We said after coffee. ☕"
+    "Ello! 🧾 Irwin would like to talk about taxes. We said after coffee. ☕",
+    "Ello! 📚 Tally lined up the columns just to say hi.",
+    "Ello! ☀️ Sunny packed an umbrella, just in case.",
+    "Ello! 🐢 Shelly is on her way. Slow and steady.",
+    "Ello! 💻 Pixel made this button easy to find.",
+    "Ello! 🎩 Hattie checked everyone is wearing the right hat."
   ];
   let g = 0;
   const hello = document.getElementById("hello"), toast = document.getElementById("toast");
@@ -721,7 +726,10 @@
     { who: "🔍 Nick", on: (h) => h >= 13 && h < 15, yes: "comparing prices", no: () => "saving a nickel somewhere" },
     { who: "🌸 Bloom", on: (h) => h >= 10 && h < 12, yes: "helping people find the business", no: () => "watering the office plants" },
     { who: "🧾 Irwin", on: () => false, yes: "", no: () => "asking to talk about taxes" },
-    { who: "☀️ Sunny", on: (h) => h >= 6 && h < 19, yes: "looking three months ahead", no: () => "packing tomorrow's umbrella" }
+    { who: "☀️ Sunny", on: (h) => h >= 6 && h < 19, yes: "looking three months ahead", no: () => "packing tomorrow's umbrella" },
+    { who: "🐢 Shelly", on: (h) => h >= 14 && h < 16, yes: "reading the fine print", no: () => "slow and steady, fully covered" },
+    { who: "💻 Pixel", on: (h) => h >= 15 && h < 17, yes: "making the website easy to find", no: () => "nothing changes without an okay" },
+    { who: "🎩 Hattie", on: (h, m, d) => d === 2 && h >= 10 && h < 12, yes: "checking everyone knows the MoCo way", no: () => "trying on hats, just to check" }
   ];
   const fmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit", weekday: "short", day: "numeric", hourCycle: "h23" });
   function tick() {
