@@ -1,5 +1,3 @@
-# MoCo (Mo & Co.)
+# moco-site
 
-Mo money, fewer problems. A small, just-for-fun page introducing MoCo, a tiny AI money team with one client and one human who approves everything.
-
-One self-contained `index.html`, no build step. The page asks search engines not to index it.
+Moved to https://ellomoco.com/ (Wed 09/30/2026). This page now redirects there.
